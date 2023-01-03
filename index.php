@@ -7,7 +7,7 @@
     <title>Mon tout premier formulaire</title>
 </head>
 <body>
-    <form action="" method="get">
+    <form action="" method="GET">
         <label for="name">Renseigner votre nom</label>
         <input type="text" name="nom" id="name" placeholder="maximum 50 caractères">
         
@@ -22,7 +22,21 @@
         <?php 
         
         echo "<h1> Je suis géniale </h1>";
-        
+
+        echo $_GET['nom'];
+        echo '<br>';
+
+        echo $_GET['age'];
+        echo '<br>';
+
+        $test = gettype($_GET);
+
+        echo $test;
+
+        echo '<br>';
+        var_dump($_GET);
+
+        echo '<h1> Bonjour '.$_GET['nom']. ' tu as '.$_GET['age'].'ans </h1>';
         ;?>
     </form>
 </body>
