@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin : auto;
+    width: 60%;
+}
+
+label {
+    padding-top: 2%;
+}
+
+button {
+    margin-top: 2%;
+}

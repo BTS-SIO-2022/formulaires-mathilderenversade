@@ -31,6 +31,8 @@ POST est la méthode à privilégier dès lors que mon utilisateur envoie des do
 
 ATTENTION avec la méthode get les données transittent en clair via l'URL DONC on ne transfère pas des données sensibles en get.
 
+Les super-globales $_GET et $_POST sont toujours accessibles même si mon utilisateur n'a pas envoyé de formulaire. Dans ce cas, elles sont des tableaux vides. 
+
 ATTENTION A LA SECURITE
 Les dispositifs de contrôle implémentées sur l'interface utilisateur ne sont JAMAIS suffisantes. 
 exemple : on a vu que via get on peut directement modifier via l'url les valeurs des différents inputs, donc renseigner des attributs n'est pas suffisant pour contrôler totalement les données et se prémunir d'attaques informatiques comme par exemple injection de code html ou javascript malveillants, cf ceci : monnomdedomaine.com/?nom=<h1>jedetestelephp</h1>&age=25
@@ -39,3 +41,13 @@ DONC IL FAUT TOUJOURS TOUJOURS mettre en place côté back, des systèmes de con
 
 Pour cela, php met à disposition toute une série de fonction et de filtre de nettoyage : 
 https://www.php.net/manual/fr/filter.filters.sanitize.php
+
+Deux fonctions php bien utiles qu'on va utiliser beaucoup 
+- empty()
+- isset()
+Ces deux fonctions nous servent à contrôler si une variable existe => isset()
+et si elle est vide ou pas => empty()
+
+Docummentation : 
+https://www.php.net/manual/fr/function.empty.php
+https://www.php.net/manual/fr/function.isset.php
